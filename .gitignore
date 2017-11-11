@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+.expo/
+android/app/build/
+android/.gradle/
+android/app/google-services.json

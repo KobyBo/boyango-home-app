@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.2.0_e795b2dd21a8a6d30070ce28c4733e1071b667a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\me.pushy\sdk-react-native\1.0.2\4121077892f75c1fc7192af404ecf6755d222f13\sdk-react-native-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4121077892f75c1fc7192af404ecf6755d222f13">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\sdk-react-native-1.0.2_ad593ad5bea5e689c5dbe517ad7537cef2ccad39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.2.0_861ad6ba52886f9cdabbe98481e3869c0724dd58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\javax.inject-1_6998782d788c5ba483790cde3271a697ff756bfa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-okhttp3\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_e0202c4030d028a0b68292fd91f792cf97f87bc8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.6.0\69edde9fc4b01c9fd51d25b83428837478c27254\okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\okhttp-3.6.0_1c5e8cc9c59b9059fc07ba0e894febf0ab00a9e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_de61a3b65c22962f1928741bba9fd93066835946.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="bd6a3b6e3c7c584a47479070fb9292a6c7468657">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-base-11.4.2_c9f9efe23c7438c9ba6aad696d5079b2d7c76d1f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_32cac405e9abf5ed03cfe9ee6f31f2a53fcf094e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\okio-1.13.0_da88e1cf34c76d05d8290c596343de6b2ccd72d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\com.facebook.fbui.textlayoutbuilder\staticlayout-proxy\1.0\f162442a19fff13995fbd51ba414d9ee05579080\staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\staticlayout-proxy-1.0_f7fbdb23dec54f91460924aca63057669a19b65b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\BoyangoHomeApp\react-native-google-signin\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b717c2decdcab90411cd6aee7a001044eb424401">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\BoyangoHomeApp-react-native-google-signin-unspecified_4f725cc5fa8a4df2b72059d08e93f761e9b3d74d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_5cf220dce90d1d6bc8336e4f78bbf9d0749210b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5f519b8c692038a47ee404b6ea6b847f6402000c">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-11.4.2_355ead7b0d5ab5db567f3ac06f8c6064fc9a9cf0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="52339832d252da4328c5ffcacbc205268346362a">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-11.4.2_2610acc34d0721e4e579e40c93d83a5e6325432e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8040d53ecd4bd895360eafdc25e1c1cc9479e6aa">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-11.4.2_f31386bcdca3efa08f7830a746b76699748dca0b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-1.3.0_3bc37a00aec0b6209af6ee7de081135ef3ffb93f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_dcf17be52b716e08422729694adfe0c221ecb3d5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_6a3ec773745593701cb087a4f2fe8aa6884f2589.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="bed98ea7af8c5c4202820875e856dd3eb296e22d">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-11.4.2_8ed6e3c04eb9a94332863afa5f604b6bfb3510a2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6e6b94b72d7912a627fb1629c310b2bca9261f06">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-11.4.2_d708a7ebe243fd90d36091ec04496eaa095a819e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.2.0_f22bcdf8a7b6cd6b0cca866e0d766bd96d26dfbb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.49.5\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_c4ab6bc1ffb1383956f05a486b799b94f2e3ba57.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="20d6aa9a18ea9833cd2bee95dff7cd303cdb80e4">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-11.4.2_ebac344457b2fe8b3984a6aa8ce40babee4179a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-urlconnection\3.6.0\3f9b16b774f2c36cfd86dd2053d0b3059531dacc\okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\okhttp-urlconnection-3.6.0_7075e2d597780aaba4b824c9ed9bf9dcff0b1063.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-drawee-1.3.0_a129eff4fde42368f9b495d96fb4f3599febe3af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="782d63e5456a49596ef322036691e25c60de3b83">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-11.4.2_a1337e31985a592f7a8c68244c2a245ee9eb213d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.2.0_fbe3152d5842a9b2668f3d44495cdb316cd2e267.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.fbui.textlayoutbuilder\textlayoutbuilder\1.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_c764a8d4facdd46e756d811d7fcebe6c83ce44c7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.49.5\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="610b957661a666d16b2cd4664c6bf4370226dfd2">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.49.5_80b639852a66c14f63439d012f90d286dd8b1abd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_3d5c13f4562b61f6a8d2bc6c8d7e84e873757a25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\me.pushy\sdk\1.0.29\d9dd45bc7c6b0e712c0c5558456b98c03f246e2f\sdk-1.0.29.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9dd45bc7c6b0e712c0c5558456b98c03f246e2f">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\sdk-1.0.29_fd6734c79e03f5642295cf6734e7a1f3ffe87add.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\koby.b\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_f4dfc1396197ad7e97049d49e73773840b0b1ff1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="643a2fd3bd06c44be5d20efc0ba4ca02036d2c8a">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-11.4.2_a7212e9c0fe25c340c12020394303dc4ee301907.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.2.0_1ac23cdf2f47523f03eedeaaa6a957ba158676e3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-api-phone\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e4efed89c18cda5bbc2309efe84bb4b67e1ef239">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-api-phone-11.4.2_3eaf43fb059416c782e6fe9819742787df6772b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\11.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2d45b277afdf55bcfdc005c03c0c2f1733aaa1b0">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-11.4.2_798dce283673deb62463f35a0ac67121e252a951.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.2.0_538695629f981611347f6c1c1adef97c3feec931.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\com.facebook.soloader-soloader-0.1.0_3c6c14e6ae877724d21af46219a52e7805b5e688.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\BoyangoHomeApp\react-native-firebase\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5ab9e0e1a80d207cd0e883acb498fbb17aa4ea6f">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\BoyangoHomeApp-react-native-firebase-unspecified_d9768ac9ed40bcf16dedf6c9041adb57cc747766.jar" />
+    </item>
+
+</items>
