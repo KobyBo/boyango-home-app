@@ -1,20 +1,14 @@
-import { AppRegistry } from 'react-native';
+import { AppRegistry, NativeModules } from 'react-native';
 import App from './App';
 import Pushy from 'pushy-react-native';
 
+const NOTIFICATION_TITLE = 'בוינג\'ו';
+
 // Handle push notifications
 Pushy.setNotificationListener(async (data) => {
-	// Print notification payload data
 	console.log('Received notification: ' + JSON.stringify(data));
-
-	// Notification title
-	let notificationTitle = 'Pushy';
-
-	// Attempt to extract the "message" property from the payload: {"message":"Hello World!"}
-	let notificationText = data.message || 'Test notification';
-
-	// Display basic system notification
-	Pushy.notify(notificationTitle, notificationText);
+	//Pushy.notify(NOTIFICATION_TITLE, data.message);
+	NativeModules.AppLauncher.launchWithNotification(NOTIFICATION_TITLE, data.message);
 });
 
 AppRegistry.registerComponent('BoyangoHomeApp', () => App);

@@ -1,3 +1,4 @@
 <resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">pbTsASzwRYpN_TYpV9bSXWEepkve7768990f-7a53-4f44-a046-c7343a42f550</string>
     <string name="app_name">BoyangoHome</string>
 </resources>

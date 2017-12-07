@@ -1,160 +1,37 @@
 import React from 'react';
-import { StyleSheet, Text, Image, View, PermissionsAndroid } from 'react-native';
+import { StyleSheet, Text, Image, Button, View, PermissionsAndroid, Vibration } from 'react-native';
+import firebase from 'react-native-firebase';
 import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 import Pushy from 'pushy-react-native';
+import codePush from "react-native-code-push";
+import LinearGradient from 'react-native-linear-gradient';
 
 const config = {
 	google: {
 		webClientId: '376043488564-fkkqqdac2echpegcs56somp1rbm2audi.apps.googleusercontent.com'
+	},
+	notification: {
+		vibrationPattern: [250, 1000, 250],
 	}
 }
 
-/**
- * 
- * 
- * @export
- * @class App
- * @extends {React.Component}
- */
-export default class App extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isLoading: true,
-			user: null
-		};
-	}
-
-	/**
-	 * 
-	 * 
-	 * @memberof App
-	 */
-	componentDidMount() {
-		(async () => {
-			await this.__initializeGoogleSignin();
-			await this.__initPushy();
-		})().then(() => {
-			console.log('Initialized');
-			this.setState({isLoading: false});
-		});
-	}
- 
-	/**
-	 * 
-	 * 
-	 * @returns 
-	 * @memberof App
-	 */
-	render() {
-		if (this.state.isLoading) {
-			return (
-				<View style={styles.container}>
-					<Text style={styles.loading}>טוען...</Text>
-				</View>)
-			;
-		}
-
-		if (!this.state.user) {
-			return (
-				<View style={styles.container}>
-					<Text style={styles.welcome}>ברוכים הבאים</Text>
-					<GoogleSigninButton 
-						style={{ width: 230, height: 48 }}
-						color={GoogleSigninButton.Color.Light}
-						size={GoogleSigninButton.Size.Standard}
-						onPress={() => { this.__signIn(); }} />
-				</View>
-			);
-		}
-
-		console.log(this.state.user.photo);
-		return (
-			<View style={styles.container}>
-				<Text style={styles.welcome}>ברוכים הבאים</Text>
-				<Image 
-					source={{uri: this.state.user.photo}}
-					style={{width: 128, height: 128, borderRadius:100}} />
-				<Text style={styles.userName}>{this.state.user.name}</Text>
-			</View>
-		);
-	}
-
-	/**
-	 * Initializes pushy notification service
-	 * 
-	 * @memberof App
-	 */
-	async __initPushy() {
-		console.log('Initializing pushy...');
-
-		// Start the Pushy service
-		Pushy.listen();
-
-		// Check whether the user has granted the app the WRITE_EXTERNAL_STORAGE permission (needed for pushy)
-		if (!(await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE))) {
-			// Request the WRITE_EXTERNAL_STORAGE permission so that the Pushy SDK will be able to persist the device token in the external storage
-			if (PermissionsAndroid.RESULTS.GRANTED !== await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE)) {
-				// TODO
-				console.log('User denied WRITE_EXTERNAL_STORAGE permission');
-			}
-		}
-
-		// Register the device for push notifications
-		const deviceToken = Pushy.register();
-		console.log('Pushy is listening');
-	}
-
-	/**
-	 * Initializes Google signin and checks if we already have a logged on user
-	 * 
-	 * @memberof App
-	 */
-	async __initializeGoogleSignin() {
-		try {
-			console.log('Setting up google signin...');
-			await GoogleSignin.hasPlayServices({ autoResolve: true });
-			await GoogleSignin.configure({
-				webClientId: config.google.webClientId,
-				offlineAccess: false
-			});
-
-			console.log('Checking for a logged on user...');
-			const user = await GoogleSignin.currentUserAsync();
-			if (user) {
-				console.log(`Found a logged on user: ${JSON.stringify(user, null, 4)}`);
-      			this.setState({user: user});
-			} else {
-				console.log('User is not logged in');
-			}
-		}
-		catch (err) {
-			console.log('Play services error', err.code, err.message);
-		}
-	}
-
-	/**
-	 * Performs Google signin
-	 * 
-	 * @memberof App
-	 */
-	__signIn() {
-		GoogleSignin.signIn()
-			.then((user) => {
-				console.log(`Logged on user: ${JSON.stringify(user, null, 4)}`);
-				this.setState({ user: user });
-			})
-			.catch((err) => {
-				console.error('Failed to sign in', err);
-			})
-			.done();
-	}
-}
+const appState = {
+	Loading: 0,
+	LoggedOut: 1,
+	Authenticating: 2,
+	Ready: 3
+};
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#fff',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+	notificationContainer: {
+		flex: 1,
+		backgroundColor: '#ff0000',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},
@@ -166,6 +43,294 @@ const styles = StyleSheet.create({
 		fontSize: 28,
 	},
 	loading: {
-		fontSize: 36
+		fontSize: 36,
+	},
+	notificationMessage: {
+		fontSize: 36,
+		color: '#ffffff',
 	},
 });
+
+const notificationGradientColors = ['#005C97', '#005C97'];
+const notificationButtonColor = '#001D61'
+
+/**
+ * 
+ * 
+ * @export
+ * @class App
+ * @extends {React.Component}
+ */
+class App extends React.Component {
+	/**
+	 * Creates an instance of App.
+	 * @param {any} props 
+	 * @memberof App
+	 */
+	constructor(props) {
+		super(props);
+		this.state = {
+			appState: appState.Loading,
+			user: null,
+			userSettings: null,
+			pendingNotification: props.notificationMessage,
+		};
+
+		this.__renderers = {
+			[appState.Loading]: this.__renderLoading.bind(this),
+			[appState.LoggedOut]: this.__renderLoggedOut.bind(this),
+			[appState.Authenticating]: this.__renderAuthenticating.bind(this),
+			[appState.Ready]: this.__renderMainUI.bind(this),
+		}
+
+		this.__handleNotificationButtonPress = this.__handleNotificationButtonPress.bind(this);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @memberof App
+	 */
+	componentDidMount() {
+		this.__initPushy().then(() => {
+			this.__firebaseAuthObserverUnsubscribe = firebase.auth().onAuthStateChanged(this.__handleFirebaseAuthChange.bind(this));
+		});
+
+		if (this.state.pendingNotification) {
+			Vibration.vibrate(config.notification.vibrationPattern, true);
+		}
+	}
+
+	componentWillUnmount() {
+		if (this.__firebaseAuthObserverUnsubscribe) {
+			this.__firebaseAuthObserverUnsubscribe();
+		}
+	}
+ 
+	/**
+	 * 
+	 * 
+	 * @returns 
+	 * @memberof App
+	 */
+	render() {
+		if (this.state.pendingNotification) {
+			return this.__renderNotification();
+		}
+
+		return this.__renderers[this.state.appState]();
+	}
+
+	/**
+	 * Initializes pushy notification service
+	 * 
+	 * @memberof App
+	 */
+	async __initPushy() {
+		try {
+			console.log("PUSHY: " + (await Pushy.isRegistered()));
+
+			console.log('Initializing pushy...');
+
+			// Start the Pushy service
+			Pushy.listen();
+
+			// Check whether the user has granted the app the WRITE_EXTERNAL_STORAGE permission (needed for pushy)
+			if (!(await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE))) {
+				// Request the WRITE_EXTERNAL_STORAGE permission so that the Pushy SDK will be able to persist the device token in the external storage
+				if (PermissionsAndroid.RESULTS.GRANTED !== await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE)) {
+					// TODO
+					console.log('User denied WRITE_EXTERNAL_STORAGE permission');
+				}
+			}
+
+			// Register the device for push notifications
+			const deviceToken = Pushy.register();
+			console.log('Pushy is listening');
+
+			if (!(await Pushy.isRegistered())) {
+				console.log('Pushy didn\'t register properly');
+				return;
+			}
+		}
+		catch (err) {
+			console.log('Pushy error:', err);
+		}
+	}
+
+	/**
+	 * firebase.auth.onAuthStateChanged event handler
+	 * 
+	 * @param {firebase.auth.User} user 
+	 * @memberof App
+	 */
+	__handleFirebaseAuthChange(user) {
+		if (user) {
+			if (appState.Ready !== this.state.appState) {
+				this.__handleUserLoggedIn(user);
+			}
+		} else {
+			if (appState.LoggedOut !== this.state.appState) {
+				this.setState({ appState: appState.LoggedOut });
+			}
+		}
+	}
+
+	/**
+	 * Handle firebase user log in (invoked by our firebase.auth.onAuthStateChanged when we have a user)
+	 * 
+	 * @param {firebase.auth.User} user 
+	 * @memberof App
+	 */
+	async __handleUserLoggedIn(user) {
+		const userSettings = (await firebase.firestore().collection("users").doc(user.uid).get()).data();
+		console.log(userSettings);
+		
+		for (topic of userSettings.notificationTopics) {
+			await Pushy.subscribe(topic);
+			console.log(`Subscribed to ${topic} successfully`);
+		}
+			
+		this.setState({ 
+			appState: appState.Ready,
+			user,
+			userSettings
+		});
+	}
+
+	/**
+	 * Signs in to Google and the Firebase (using the Google account) 
+	 * 
+	 * @memberof App
+	 */
+	async __signIn() {
+		try {
+			this.setState({ appState: appState.Authenticating });
+
+			// Setup google signin
+			console.log('Setting up google signin...');
+			await GoogleSignin.hasPlayServices({ autoResolve: true });
+			await GoogleSignin.configure({
+				webClientId: config.google.webClientId,
+				offlineAccess: false
+			});
+
+			// Sign in to google
+			const googleUser = await GoogleSignin.signIn();
+			console.log(`Logged on google user: ${JSON.stringify(googleUser, null, 4)}`);
+
+			// Create a new firebase credential with the user's token
+			console.log("Logging in to Firebase...");
+			const credential = firebase.auth.GoogleAuthProvider.credential(googleUser.idToken, googleUser.accessToken);
+			
+			// Finally, login to firebase with the user's credentials
+			const user = await firebase.auth().signInWithCredential(credential);
+			console.log(`Logged on user: ${JSON.stringify(user, null, 4)}`);
+	
+			this.setState({ 
+				user: user,
+				appState: appState.Ready
+			});
+		}
+		catch (err) {
+			console.log('Failed to log in', err.code, err.message);
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @returns 
+	 * @memberof App
+	 */
+	__renderLoading() {
+		return (
+			<View style={styles.container}>
+				<Text style={styles.loading}>טוען...</Text>
+			</View>
+		);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @returns 
+	 * @memberof App
+	 */
+	__renderLoggedOut() {
+		return (
+			<View style={styles.container}>
+				<Text style={styles.welcome}>ברוכים הבאים</Text>
+				<GoogleSigninButton 
+					style={{ width: 230, height: 48 }}
+					color={GoogleSigninButton.Color.Light}
+					size={GoogleSigninButton.Size.Standard}
+					onPress={() => { this.__signIn(); }} />
+			</View>
+		);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @returns 
+	 * @memberof App
+	 */
+	__renderAuthenticating() {
+		return (
+			<View style={styles.container}>
+				<Text style={styles.loading}>מתחבר...</Text>
+			</View>
+		);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @returns 
+	 * @memberof App
+	 */
+	__renderMainUI() {
+		return (
+			<View style={styles.container}>
+				<Text style={styles.welcome}>ברוכים הבאים</Text>
+				<Image 
+					source={{uri: this.state.user.photoURL}}
+					style={{width: 128, height: 128, borderRadius:100}} 
+				/>
+				<Text style={styles.userName}>{this.state.user.displayName}</Text>
+			</View>
+		);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @memberof App
+	 */
+	__renderNotification() {
+		return (
+			<LinearGradient colors={notificationGradientColors} style={styles.notificationContainer}>
+				<Text style={styles.notificationMessage}>{this.props.notificationMessage}</Text>
+				<Button
+					onPress={this.__handleNotificationButtonPress}
+					title="כבה"
+					style={styles.notificationButton}
+				/>
+			</LinearGradient>
+		);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @memberof App
+	 */
+	__handleNotificationButtonPress() {
+		Vibration.cancel();
+		this.setState({ pendingNotification: null });
+	}
+}
+
+App = codePush(App);
+export default App;
