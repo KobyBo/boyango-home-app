@@ -228,6 +228,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\BoyangoHomeApp\react-native-sound\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7928ca2aee98dbdd5120ff66393d67402b5b719c">
+        <dex dex="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\pre-dexed\debug\BoyangoHomeApp-react-native-sound-unspecified_82cc0719a5ecb438d5cf21e339b471ae43609f39.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\PersonalProjects\BoyangoAlarm\boyango-home-app\android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
